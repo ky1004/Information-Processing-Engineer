@@ -2,6 +2,8 @@
 
 > ## 1. 데이터베이스 기본
 
+<br>
+
 > ### 1) 트랜잭션
 
 - 트랜잭션 : DB시스템에서 하나의 논리적 기능을 정상적으로 수행하기 위한 작업의 기본단위
@@ -43,6 +45,8 @@
     - 로그기반 : 즉시갱신(갱신결과 바로 DB반영), 지연갱신(완료 전까지 기록x)
     - 체크포인트 : 검사점 이후에 처리된 트랜잭션만 장애발생 이전 상태로 복구
     - 그림자페이징 : 장애발생 시 복제본을 이용하여 복구
+
+<br>
 
 > ### 2) DDL, DML, DCL
 
@@ -89,6 +93,8 @@
   - ALTER [UNIQUE] INDEX Idxname ON Tbname(Clname);
 - 인덱스 스캔방식 : 범위(필요범위), 전체, 단일(수직적탐색), 생략(조건절빠져도 인덱스활용)
 
+<br>
+
 > > #### DDL
 
 - CREATE, ALTER, DROP, TRUNCATE
@@ -124,3 +130,19 @@
   DROP INDEX Idxname;
 
 - View As / Index On
+
+<br>
+
+> > #### DML
+
+- 데이터베이스에 저장된 자료들을 입력, 수정, 삭제, 조회하는 언어
+- DML 유형 : SELECT, INSERT, UPDATE, DELETE
+- SELECT 명령문
+  - SELELCT FROM WHERE GROUP BY HAVING ORDER BY
+- WHERE조건
+  - 비교 : =,<>,<,<=,>,>=
+  - 범위 : BETWEEN A AND B
+  - 집합 : IN, NOT IN
+  - 패턴 : LIKE
+  - NULL : IS NULL, IS NOT NULL
+  - 복합조건 : AND, OR, NOT
